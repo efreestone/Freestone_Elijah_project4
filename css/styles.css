@@ -37,6 +37,7 @@ body {
     position: inherit;
 }
 
+
 body>a {  /* For Save-a-date <a> tag on index */
     font-family: "Helvetica", "Arial";
     display: table;
@@ -140,3 +141,13 @@ nav>a { /* All <a> tags within nav. Display Data, Clear Local Data, etc */
     font-size: 120%;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f2fdff), to(#97edfc));
 }
+
+output#chosen { /* Slider Output */
+	background-color: #f2fdff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    padding: 2px 10px;
+    margin-left: 77px;
+    width: 25px; 
+    font-family: "Helvetica", "Arial";

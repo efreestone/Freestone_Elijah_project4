@@ -36,7 +36,10 @@
 				<li><label for="evinfo">*Event Information:</label><input type="text" id="evinfo" placeholder="Dads birthday, etc."/></li>
 		<!-- Importance of Event Slider -->
 				<li><label for="importance">Event Importance:</label><br>
-					1 <input type="range" id="importance" min="1" max="5" class="range" value="3" /> 5 </li>
+					1 <input type="range" id="importance" min="1" max="5" class="range" value="3" onchange="chosen.value=value"/> 5 <br>		
+					<!-- Slider output -->
+					<output id="chosen">3</output> </li>
+
 		<!-- Attendance required?  -->
 				<li>Is Attendance Required?
 					<ul class="checkbox">

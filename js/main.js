@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function() {
     function $(x) {
         var theElement = document.getElementById(x);
         return theElement;
-    }
+    };
     
     //Create select field element and populate with options
     function makeEvType() { 
@@ -264,7 +264,7 @@ window.addEventListener("DOMContentLoaded", function() {
         errMsg = $("errors");
         
     makeEvType();
-    
+        
     //Set link & Submit Click Events
     var save = $("submit");
     save.addEventListener("click", validate);
