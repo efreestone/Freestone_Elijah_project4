@@ -10,12 +10,10 @@ html {
 }
 
 h1 {
-	font-family: "Times New Roman", "Arial";
-    color: #172934;
-    font-size: 275%;
+
     text-align: center;
-    padding: 0.75em;
-    margin: -0.75em -0.75em 0.025em -0.75em;
+    padding: 12px;
+    margin: -12px -12px 8px -12px;
 }
 
 h2 {
@@ -147,7 +145,18 @@ img {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     border: solid 1px #172934;
-    padding: 2px;
+    padding: 4px;
+}
+
+div>ul>li {
+    background-color: #ccf5fd;
+    color: #172934;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-left: -5px;
 }
 
 output#chosen { /* Slider Output */
