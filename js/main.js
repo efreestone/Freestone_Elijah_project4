@@ -89,7 +89,8 @@ window.addEventListener("DOMContentLoaded", function() {
     function showData() {
         toggleControls("on");
         if(localStorage.length === 0) {
-            alert("There are no dates to show.");
+            alert("There are no dates to show so default data was added.");
+            autoFillData();
         }
         //Write Data from Local Storage to the browser.
         var makeDiv = document.createElement("div");
@@ -108,6 +109,7 @@ window.addEventListener("DOMContentLoaded", function() {
             var obj = JSON.parse(value);
             var makeSubList = document.createElement("ul");
             makeLi.appendChild(makeSubList);
+            getImage(obj.events[1], makeSubList);
             for(var n in obj) {
                 var makeSubLi = document.createElement("li");
                 makeSubList.appendChild(makeSubLi);
@@ -117,6 +119,26 @@ window.addEventListener("DOMContentLoaded", function() {
             }
             makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons/link for each item in local storage
         }
+    };
+    
+    //Get th eimage for the correct event category.
+    function getImage(catName, makeSubList) {
+	    var imageLi = document.createElement("li");
+	    makeSubList.appendChild(imageLi);
+	    var newImg = document.createElement("img");
+	    var setSrc = newImg.setAttribute("src", "img/"+ catName +".jpg");
+	    imageLi.appendChild(newImg);
+    };
+    
+    //Auto populate local storage for testing. REMOVE FROM FINAL APP!!!
+    function autoFillData() {
+	    //The actual JSON object data required for this is coming from json.js, which is loaded from our HTML page
+	    //Store the JSON object into Local Storage
+	    for(var n in json) {
+		    var id = Math.floor(Math.random()*100000001);
+		    localStorage.setItem(id, JSON.stringify(json[n]));	    
+		}
+	    
     };
     
     //Make Item Links
@@ -197,11 +219,12 @@ window.addEventListener("DOMContentLoaded", function() {
     };
     
     function clearData() {
-        if(localStorage.length === 0) {
+    	if(localStorage.length === 0) {
             alert("No data to clear.");
         }else{
+        var ask = confirm("Are you sure you want to delete all events?");
             localStorage.clear();
-            alert("All dates removed!");
+            alert("All events have been removed!");
             window.location.reload();
             return false;
         }

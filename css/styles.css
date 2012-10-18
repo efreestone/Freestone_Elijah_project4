@@ -142,6 +142,14 @@ nav>a { /* All <a> tags within nav. Display Data, Clear Local Data, etc */
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f2fdff), to(#97edfc));
 }
 
+img {
+	background-color: #f2fdff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    padding: 2px;
+}
+
 output#chosen { /* Slider Output */
 	background-color: #f2fdff;
     -webkit-border-radius: 10px;
