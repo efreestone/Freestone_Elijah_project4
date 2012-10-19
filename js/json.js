@@ -1,3 +1,10 @@
+/*
+Elijah Freestone
+VFW 1210
+Project 4
+10-14-12
+*/
+
 var json = {
 	"event1": {
 		"events": ["Event type:", "Birthday"],
