@@ -40,6 +40,7 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     };
     
+    //To hide or show input fields and controls
     function toggleControls(n) {
         switch(n) {
             case "on":
